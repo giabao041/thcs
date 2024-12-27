@@ -3,42 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thcs hht</title>
-    <link rel="stylesheet" href="thcs.css">
+    <title>Trường THCS Hoàng Hoa Thám Quận Tân Bình Fake</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4C9F70;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #388E3C;
+            transform: translateY(-3px);
+        }
+
+        /* Moving rainbow border on hover */
+        @keyframes movingRainbowBorder {
+            0% {
+                border-color: red;
+            }
+            14% {
+                border-color: orange;
+            }
+            28% {
+                border-color: yellow;
+            }
+            42% {
+                border-color: green;
+            }
+            57% {
+                border-color: blue;
+            }
+            71% {
+                border-color: indigo;
+            }
+            85% {
+                border-color: violet;
+            }
+            100% {
+                border-color: red;
+            }
+        }
+
+        /* Section style */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 5px solid transparent; /* Default border is transparent */
+        }
+
+        /* Hover effect */
+        section:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+            animation: movingRainbowBorder 7s linear infinite; /* Rainbow border on hover */
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #4C9F70;
+            border-bottom: 3px solid #4C9F70;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            border-left: 5px solid #4C9F70;
+            padding-left: 15px;
+            background-color: #f1f8f4;
+            border-radius: 8px;
+        }
+
+        #programs img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        #programs img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 12px 0;
+        }
+
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #4CAF50;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            border: 3px solid #4CAF50;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between images */
+            padding: 20px;
+        }
+
+        #gallery img {
+            width: 100%;
+            max-width: 300px; /* Restrict maximum image width */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links ul li {
+            margin: 0 15px;
+        }
+
+        .social-links ul li a {
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-links ul li a:hover {
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .contact-info p,
+            .contact-info {
+                padding: 15px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            #gallery img {
+                max-width: 100%;
+            }
+        }
+
+        /* Scrolling text */
+        .scrolling-text {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .scrolling-text p {
+            display: inline-block;
+            animation: scrollText 15s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Clock styles */
+        .clock {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Trường THCS Hoàng Hoa Thám quận Tân Bình</h1>
+        <h1>Trường THCS Hoàng Hoa Thám Quận Tân Bình</h1>
         <nav>
             <ul>
                 <li><a href="#about">Giới thiệu</a></li>
                 <li><a href="#programs">Chương trình</a></li>
-                <li><a href="#contact">Liên hệ với chúng tôi</a></li>
+                <li><a href="#activities">Hoạt động</a></li>
+                <li><a href="#reviews">Đánh giá</a></li>
+                <li><a href="#gallery">Thư viện ảnh</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Scrolling Text -->
+    <div class="scrolling-text">
+        <p>Năm học 2024-2025</p>
+    </div>
+
+    <!-- Current Time -->
+    <div class="clock" id="clock">
+        <!-- Time will be inserted here by JavaScript -->
+    </div>
+    
     <section id="about">
-        <h2>Trường chúng tôi</h2>
-        <p>Nhà trường luôn tập trung vào việc cải thiện trang thiết bị dạy học, cung cấp phương tiện học tập và mẫu vật cần thiết để giáo viên và học sinh có đủ điều kiện để thực hiện các hoạt động thực hành. Các phòng học chuyên ngành cũng được sử dụng một cách tối ưu để tạo ra môi trường học tập tốt nhất. Đặc biệt, nếu đang cần tìm trường cấp 2 bán trú quận Tân Bình thì phụ huynh cũng có thể yên tâm lựa chọn ngôi trường này.
+        <h2>Giới thiệu về trường</h2>
+        <p>Trường chúng tôi luôn chú trọng đến việc cải thiện kỹ năng bắn ff và cung cấp các phương tiện hỗ trợ tốt nhất cho giáo viên và học sinh trong các hoạt động đua xe bốc đầu. Đặc biệt, nhà trường còn đặc biệt quan tâm đến việc tạo ra một môi trường báo thủ hiệu quả và sáng tạo cho học sinh.</p>
+    </section>
 
-            Ngoài việc nâng cao năng lực của đội ngũ giáo viên, Trường THCS Hoàng Hoa Thám cũng tập trung vào việc cải thiện chất lượng giáo dục cho học sinh. Từ đầu năm học, các giáo viên chủ nhiệm đã tiến hành khảo sát và phân loại học sinh để có thể thực hiện quá trình giảng dạy một cách hiệu quả hơn.</p>
+    <section id="programs">
+        <h2>Chương trình đào tạo</h2>
+        <p>Trường THCS Hoàng Hoa Thám quận Tân Bình tuyển sinh lớp 6 cho năm học 2024-2025 với chương trình tích hợp và các môn học sáng tạo như đua xe, kỹ năng sống và các hoạt động chém lộn khác.</p>
+        <h4>Hình ảnh của trường</h4>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.xx6OLQTwfEOalbMDlChJKQHaFj&pid=Api&P=0&h=180" alt="Hình ảnh của giáo viên">
     </section>
-    <section id="programs" 
 
-        <h2>Văn bản là hướng dẫn tuyển sinh lớp 6 năm học 2024-2025 của Sở Giáo dục và Đào tạo TP.HCM cho các trường có chương trình tích hợp Toán, Khoa học và Tiếng Anh. Văn bản nêu danh sách các trường tuyển sinh, môn thi và chỉ tiêu trường THCS Hoàng Hoa Thám (Quận tân bình).        </h2>
-        <p>[Chương trình đào tạo]</p>
-        <h4>Hình ảnh</h4>
+    <section id="activities">
+        <h2>Các hoạt động ngoại khóa</h2>
+        <p>Trường THCS Hoàng Hoa Thám luôn chú trọng đến việc phát triển toàn diện cho học sinh. Các hoạt động ngoại khóa như câu lạc bộ chém lộn, bốc đầu, và các dự án cộng đồng giúp học sinh phát huy tối đa khả năng sáng tạo và kỹ năng báo thủ.</p>
     </section>
-        <img src="https://i.ytimg.com/vi/l_N6ZShfZj8/maxresdefault.jpg" alt="Hình ảnh của giáo viên">
+
+    <section id="reviews">
+        <h2>Đánh giá của học sinh</h2>
+        <p>"Trường rất năng động và sáng tạo, với môi trường học tập Thù địch và đầy thử thách!" - Học sinh lớp 9.</p>
+        <p>"Giáo viên tận tâm, luôn sẵn sàng hỗ trợ học sinh trong mọi hoạt động học tập." - Phụ huynh học sinh lớp 6.</p>
     </section>
+
+    <section id="gallery">
+        <h2>Thư viện ảnh</h2>
+        <div>
+            <img src="https://8486fef5bc.vws.vegacdn.vn/uploadimages/haydung/thcshoanghoatham/anhhaydung/1_191220241656.jpg?w=800" alt="Ảnh 1">
+            <img src="https://8486fef5bc.vws.vegacdn.vn/uploadimages/haydung/thcshoanghoatham/anhhaydung/TieudoanTacchiendientu97/3_191220241517.jpg?w=800" alt="Ảnh 2">
+            <img src="https://8486fef5bc.vws.vegacdn.vn/uploadimages/haydung/thcshoanghoatham/anhhaydung/KetquaKHKTcapTP/1_19122024836.jpg?w=800" alt="Ảnh 3">
+        </div>
+    </section>
+
     <section id="contact">
-        </h2>Liên hệ</h2>
-        <p>Email: tranlegiabao518@gmail.com</p>
-        <p>Phone: 0906716728</p>
+        <h2>Liên hệ với chúng tôi</h2>
+        <div class="contact-info">
+            <p><strong>Tên:</strong>Trần Lê Gia Bảo</p>
+            <p><strong>Số điện thoại:</strong>0906716728</p>
+            <p><strong>Người làm web:</strong>Trần Lê Gia Bảo 8A14</p>
+        </div>
     </section>
+
+    <section id="social" class="social-links">
+        <h2>Kết nối với chúng tôi</h2>
+        <p>Theo dõi chúng tôi trên các mạng xã hội:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=61553729318125&locale=vi_VN" target="_blank">Facebook</a></li>
+            <li><a href="https://youtube.com/@bonguyennguyen6852?si=fYya175pdoWoNesN" target="_blank">youtube</a></li>
+            <li><a href="tranlegiabao518@gmail.com" target="_blank">gmail</a></li>
+        </ul>
+    </section>
+
     <footer>
-        <p>&copy; 2024 thcs Hoàng Hoa Thám. Tân Bình.</p>
+        <p>&copy; 2024 Trường THCS Hoàng Hoa Thám.Tân Bình.</p>
     </footer>
-    <script src="thcs.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("Website loaded successfully!");
+
+            // Function to update the clock
+            function updateClock() {
+                const clockElement = document.getElementById('clock');
+                const now = new Date();
+
+                // Extract hours, minutes, seconds, day, month, and year
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const month = String(now.getMonth() + 1).padStart(2, '0'); // Get month (0-11), add 1 for display
+                const year = now.getFullYear();
+
+                // Display the time and date in the desired format
+                clockElement.textContent = `Thời gian hiện tại: ${hours}:${minutes}:${seconds} | Ngày: ${day}/${month}/${year}`;
+            }
+
+            // Update the clock every second
+            setInterval(updateClock, 1000);
+            updateClock(); // Call once to immediately show the time
+        });
+    </script>
 </body>
 </html>
